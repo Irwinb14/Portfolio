@@ -25,3 +25,148 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.homeContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150px;
+  background-image: url('https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/search_result/public/media/images/Oceanwaves.gif?itok=FKjfzznN');
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.homeSubtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  background-image: url('https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/search_result/public/media/images/Oceanwaves.gif?itok=FKjfzznN');
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.homeAboutContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.homeAboutText {
+  width: 60%;
+  text-align: center;
+  color: #6bb4d9;
+  font-size: 30px;
+}
+
+nav{
+  transition: .3s;
+
+}
+
+nav.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.768);
+  border-bottom: solid #6bb4d9aa;
+  border-bottom-width: 1px;
+  box-shadow: inset 0 -10px 10px -10px #2E8B57;
+}
+.navItem{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-weight:300;
+  font-size: x-large;
+}
+
+.navItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6bb4d9;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.768);
+  margin-top:80px;
+}
+
+.footerContent{
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.iconDiv{
+  margin-right: 80px;
+  text-align: center;
+  color:#3afd098b;
+  font-weight: 300;
+}
+
+.projectsContainer{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectCard{
+  color: #3afd09;
+  font-size: x-large;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: #2E8B57;
+}
+
+.divider{
+  margin-top: 1rem;
+  width: 25%;
+  text-align: center;
+  border-color: #6bb4d9;
+  border-width: .5;
+  box-shadow: 0px 0px 3px 1px #2E8B57;
+}
+
+img {
+  box-shadow: 0px 0px 3px 2px #2E8B57;
+  transition: all .5s ease-in-out;
+}
+
+img:hover {
+transform: scale(1.1);
+}

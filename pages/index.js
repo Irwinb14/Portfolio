@@ -1,6 +1,7 @@
 import Zoom from 'react-reveal/Zoom';
 import fitbot from '../projects/FitBot.png';
 import choropleth from '../projects/choropleth.png';
+import atocha from '../projects/atocha.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Contrail_One } from 'next/font/google';
@@ -43,7 +44,20 @@ export default function Home() {
             href='https://irwinb14.github.io/Covid-Choropleth/'
             target='_blank'
           >
-            <Image width={500} src={choropleth} alt='FitBot' />
+            <Image width={550} src={choropleth} alt='choropleth' />
+          </Link>
+        </div>
+        <div className='atochaProjectCard'>
+          <Link
+            href='https://www.youtube.com/watch?v=TigcQqv85zk&list=PLx0iOsdUOUmkAw0zV4kJO8Ci80W5muK7R&index=8&t=2s'
+            target='_blank'
+          >
+            <Image
+              width={300}
+              src={atocha}
+              alt='atocha'
+              className='rounded-xl'
+            />
           </Link>
         </div>
       </div>

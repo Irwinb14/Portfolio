@@ -25,10 +25,14 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Home */
 .homeContainer {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #ebebeb;
 }
 
 .homeTitle {
@@ -63,25 +67,26 @@ body {
 .homeAboutText {
   width: 60%;
   text-align: center;
-  color: #6bb4d9;
+  color:#3790bd;
   font-size: 30px;
 }
 
 nav{
   transition: .3s;
-
+  background-color: #ffffff;
 }
 
 nav.sticky {
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: rgba(255, 254, 254, 0.587);
 }
 
 .nav{
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.768);
+  background-color: rgba(255, 255, 255, 0.587);
   border-bottom: solid #6bb4d9aa;
   border-bottom-width: 1px;
   box-shadow: inset 0 -10px 10px -10px #2E8B57;
@@ -92,7 +97,8 @@ nav.sticky {
   display: inline-block;
   position: relative;
   text-align: center;
-  font-weight:300;
+  color:#2E8B57;
+  font-weight:400;
   font-size: x-large;
 }
 
@@ -104,7 +110,7 @@ nav.sticky {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #6bb4d9;
+  background-color: #3790bd;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -119,24 +125,31 @@ nav.sticky {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.768);
-  margin-top:80px;
+  background-color: #ebebeb;  
 }
 
 .footerContent{
   margin-bottom: 10px;
   display: flex;
+  justify-content: center;
+    background-color: #ebebeb;
 }
 
 .iconDiv{
-  margin-right: 80px;
+  margin-right: 60px;
   text-align: center;
-  color:#3afd098b;
+  color:#39b41ab5;
   font-weight: 300;
+}
+
+.endIcon{
+  text-align: center;
+  color: #39b41ab5;    font-weight: 300;
 }
 
 .projectsContainer{
   margin-top: 20px;
+  margin-bottom: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -144,7 +157,6 @@ nav.sticky {
 }
 
 .projectCard{
-  color: #3afd09;
   font-size: x-large;
   margin: 40px;
   display: flex;
@@ -158,15 +170,66 @@ nav.sticky {
   width: 25%;
   text-align: center;
   border-color: #6bb4d9;
-  border-width: .5;
+  border-width: 1;
   box-shadow: 0px 0px 3px 1px #2E8B57;
 }
 
 img {
-  box-shadow: 0px 0px 3px 2px #2E8B57;
+border-radius: 38px;
+  background: #ffffff;
+  box-shadow: 12px 12px 13px #5e5e5e,
+    -12px -12px 13px #ffffff;
   transition: all .5s ease-in-out;
 }
 
 img:hover {
-transform: scale(1.1);
+transform: scale(1.05);
 }
+
+/* About */
+
+
+.aboutContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+}
+
+.aboutTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  background-image: url('https://t4.ftcdn.net/jpg/03/00/85/23/360_F_300852364_qSrtNxY6pokaVR7er7knpb8AyYJSxtUd.jpg');
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+ 
+.aboutCard{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  margin-top: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.description{
+  display: flex;
+ flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  color:#3790bd;
+}
+
+.descriptiionCard{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+

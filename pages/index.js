@@ -5,6 +5,7 @@ import atocha from '../projects/atocha.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Contrail_One } from 'next/font/google';
+import { Fade } from 'react-awesome-reveal';
 
 const contrail = Contrail_One({ weight: '400', subsets: ['latin'] });
 
@@ -16,15 +17,15 @@ export default function Home() {
         <h1 className='homeSubtitle'>Fullstack Developer</h1>
       </div>
       <div className='homeAboutContainer'>
-        <Zoom>
-          <p className='homeAboutText'>
+        <Fade duration='2000' className='homeAboutText'>
+          <p>
             Hello! My name is Bryan, and I have a passion for creating tools
             that better the lives of people. I was born and raised in Long
             Island, NY, and am currently living in San Diego. Asside from
             coding, my passions include fitness, surfing, and listening to good
             music.
           </p>
-        </Zoom>
+        </Fade>
       </div>
       <div className='flex justify-center my-20 mb-5'>
         <hr class='divider'></hr>

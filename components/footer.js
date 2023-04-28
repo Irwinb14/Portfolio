@@ -1,6 +1,13 @@
 import React from 'react';
 import { FaReact, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { SiRedux, SiOpenai, SiFirebase, SiTailwindcss } from 'react-icons/si';
+import {
+  SiRedux,
+  SiOpenai,
+  SiFirebase,
+  SiTailwindcss,
+  SiSequelize,
+  SiNextdotjs,
+} from 'react-icons/si';
 import { DiJavascript, DiPostgresql } from 'react-icons/di';
 
 const Footer = () => {
@@ -42,6 +49,14 @@ const Footer = () => {
         <div className='iconDiv'>
           <SiTailwindcss size={60} className='glow' />
           <p>TailwindCSS</p>
+        </div>
+        <div className='iconDiv'>
+          <SiSequelize size={60} className='glow' />
+          <p>Sequelize</p>
+        </div>
+        <div className='endIcon'>
+          <SiNextdotjs size={60} className='glow' />
+          <p>NextJs</p>
         </div>
       </div>
     </div>

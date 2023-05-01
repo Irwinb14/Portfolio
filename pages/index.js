@@ -1,7 +1,7 @@
-import Zoom from 'react-reveal/Zoom';
 import fitbot from '../projects/FitBot.png';
 import choropleth from '../projects/choropleth.png';
 import atocha from '../projects/atocha.png';
+import yardsale from '../projects/yardsale.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Contrail_One } from 'next/font/google';
@@ -37,7 +37,7 @@ export default function Home() {
       <div className='projectsContainer'>
         <div className='projectCard'>
           <Link href='https://www.fitbotapp.com/' target='_blank'>
-            <Image width={500} src={fitbot} alt='FitBot' />
+            <Image width={600} src={fitbot} alt='FitBot' />
           </Link>
         </div>
         <div className='projectCard'>
@@ -45,7 +45,15 @@ export default function Home() {
             href='https://irwinb14.github.io/Covid-Choropleth/'
             target='_blank'
           >
-            <Image width={550} src={choropleth} alt='choropleth' />
+            <Image width={600} src={choropleth} alt='choropleth' />
+          </Link>
+        </div>
+        <div className='projectCard'>
+          <Link
+            href='https://github.com/postico-gracehopper/postico'
+            target='_blank'
+          >
+            <Image width={600} src={yardsale} alt='yardsale' />
           </Link>
         </div>
         <div className='atochaProjectCard'>

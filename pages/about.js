@@ -1,15 +1,19 @@
 import { Slide } from 'react-awesome-reveal';
 import { TbCrown } from 'react-icons/tb';
 import { FaFlagUsa } from 'react-icons/fa';
+import { TbMountain } from 'react-icons/tb';
+import { RiComputerLine } from 'react-icons/ri';
 import Image from 'next/image';
 import navy from '../aboutImages/navy.webp';
 import wesleyan from '../aboutImages/wesleyan.jpg';
+import idaho from '../aboutImages/idaho.jpeg';
+import fullstack from '../aboutImages/fullstack.jpg';
 
 const About = () => {
   return (
     <div className='aboutContainer'>
       <h1 className='aboutTitle'>My Story</h1>
-      <div className='aboutDiv'>
+      <div>
         <div className='flex justify-center my-20 mb-40'>
           <hr class='divider'></hr>
           <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
@@ -72,6 +76,57 @@ const About = () => {
             Fullstack Academy
           </h1>
           <hr className='divider'></hr>
+        </div>
+        <div className='aboutCard'>
+          <Slide>
+            <Image
+              width={400}
+              src={idaho}
+              alt='idaho'
+              className='border-2 border-yellow-500'
+            />
+          </Slide>
+          <Slide direction='right' className='description'>
+            <div className='descriptiionCard'>
+              <TbMountain size={60} className='mb-5' />
+              <p>
+                After seperating from the Navy I spent my summer exploring the
+                West Coast with friends. During this time I hiked in Sun Valley
+                Idaho, swam in Lake Tahoe, and saw one of my favorite bands play
+                in Paso Robles.
+              </p>
+            </div>
+          </Slide>
+        </div>
+        <div className='flex justify-center my-40 mb40'>
+          <hr class='divider'></hr>
+          <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
+            Fullstack
+          </h1>
+          <hr className='divider'></hr>
+        </div>
+        <div className='aboutCard'>
+          <Slide>
+            <Image
+              width={400}
+              src={fullstack}
+              alt='fullstack'
+              className='border-2 border-black	'
+            />
+          </Slide>
+          <Slide direction='right' className='description'>
+            <div className='descriptiionCard'>
+              <RiComputerLine size={60} className='mb-5' />
+              <p>
+                In November of 2022, I enrolled in Fullstack Academy's 14 week
+                web development immersive. While at Fullstack Academy I learned
+                about back-end and front-end developement, pair programmed with
+                peers, and worked on several projects in a team setting,
+                including an e-commerce site and a text and speech translation
+                mobile app.
+              </p>
+            </div>
+          </Slide>
         </div>
       </div>
     </div>

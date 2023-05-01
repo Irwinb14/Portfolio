@@ -15,7 +15,7 @@ const About = () => {
       <h1 className='aboutTitle'>My Story</h1>
       <div>
         <div className='flex justify-center my-20 mb-40'>
-          <hr class='divider'></hr>
+          <hr className='divider'></hr>
           <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
             Wesleyan University
           </h1>
@@ -36,14 +36,14 @@ const About = () => {
               <p>
                 In 2019, I graduated from Wesleyan University with a Bachelor of
                 Arts in Psychology. While at Wesleyan, I was a member of the
-                Men's Varsity Lacrosse team. In 2018 our team acheived one of my
+                Mens Varsity Lacrosse team. In 2018 our team acheived one of my
                 lifelong dreams - an NCAA National Championship.
               </p>
             </div>
           </Slide>
         </div>
         <div className='flex justify-center my-40 mb40'>
-          <hr class='divider'></hr>
+          <hr className='divider'></hr>
           <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
             US Navy
           </h1>
@@ -71,9 +71,9 @@ const About = () => {
           </Slide>
         </div>
         <div className='flex justify-center my-40 mb40'>
-          <hr class='divider'></hr>
+          <hr className='divider'></hr>
           <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
-            Fullstack Academy
+            Travel
           </h1>
           <hr className='divider'></hr>
         </div>
@@ -99,9 +99,9 @@ const About = () => {
           </Slide>
         </div>
         <div className='flex justify-center my-40 mb40'>
-          <hr class='divider'></hr>
+          <hr className='divider'></hr>
           <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
-            Fullstack
+            Fullstack Academy
           </h1>
           <hr className='divider'></hr>
         </div>

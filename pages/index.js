@@ -1,6 +1,6 @@
 import fitbot from '../projects/FitBot.png';
 import choropleth from '../projects/choropleth.png';
-import atocha from '../projects/atocha.png';
+import atocha from '../projects/Atocha.png';
 import yardsale from '../projects/yardsale.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,7 +28,7 @@ export default function Home() {
         </Fade>
       </div>
       <div className='flex justify-center my-20 mb-5'>
-        <hr class='divider'></hr>
+        <hr className='divider'></hr>
         <h1 className='text-center text-seagreen mx-5 text-2xl flex flex-shrink'>
           Projects
         </h1>

@@ -19,9 +19,9 @@ export default function Home() {
       <div className='homeAboutContainer'>
         <Fade duration='2000' className='homeAboutText'>
           <p>
-            Hello! My name is Bryan, and I have a passion for creating tools
-            that better the lives of people. I was born and raised in Long
-            Island, NY, and am currently living in San Diego. Asside from
+            Hello! My name is Bryan, and I have a passion for creating tools and
+            applications that better the lives of others. I was born and raised
+            in Long Island, NY, and am currently living in San Diego. Aside from
             coding, my passions include fitness, surfing, and listening to good
             music.
           </p>

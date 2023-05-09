@@ -31,7 +31,7 @@ const Projects = () => {
               their generated workouts and track their progress on a user
               dashboard. When a user saves a workout, their dashboard will
               display a suggested next workout based on what they did in their
-              the previous session.
+              previous session.
             </p>
             <div className='stackContainer'>
               <div className='stackIcon'>

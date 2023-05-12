@@ -9,53 +9,81 @@ import {
   SiNextdotjs,
 } from 'react-icons/si';
 import { DiJavascript, DiPostgresql } from 'react-icons/di';
+import { useEffect, useState, useCallback } from 'react';
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, [width, updateTarget]);
+
+  return targetReached;
+};
 
 const Footer = () => {
+  const isBreakPoint = useMediaQuery(600);
   return (
     <div className='footer'>
       <div className='footerContent'>
         <div className='iconDiv'>
-          <DiJavascript size={60} />
+          <DiJavascript size={isBreakPoint ? 30 : 60} />
           <p>Javascript</p>
         </div>
         <div className='iconDiv'>
-          <FaHtml5 size={60} />
+          <FaHtml5 size={isBreakPoint ? 30 : 60} />
           <p>HTML5</p>
         </div>
         <div className='iconDiv'>
-          <FaCss3 size={60} />
+          <FaCss3 size={isBreakPoint ? 30 : 60} />
           <p>CSS</p>
         </div>
         <div className='iconDiv'>
-          <FaReact size={60} />
+          <FaReact size={isBreakPoint ? 30 : 60} />
           <p>React</p>
         </div>
         <div className='iconDiv'>
-          <SiRedux size={60} />
+          <SiRedux size={isBreakPoint ? 30 : 60} />
           <p>Redux</p>
         </div>
         <div className='iconDiv'>
-          <DiPostgresql size={60} />
+          <DiPostgresql size={isBreakPoint ? 30 : 60} />
           <p>Postgresql</p>
         </div>
         <div className='iconDiv'>
-          <SiFirebase size={60} />
+          <SiFirebase size={isBreakPoint ? 30 : 60} />
           <p>Firebase</p>
         </div>
         <div className='iconDiv'>
-          <SiOpenai size={60} />
+          <SiOpenai size={isBreakPoint ? 30 : 60} />
           <p>OpenAI</p>
         </div>
         <div className='iconDiv'>
-          <SiTailwindcss size={60} />
+          <SiTailwindcss size={isBreakPoint ? 30 : 60} />
           <p>TailwindCSS</p>
         </div>
         <div className='iconDiv'>
-          <SiSequelize size={60} />
+          <SiSequelize size={isBreakPoint ? 30 : 60} />
           <p>Sequelize</p>
         </div>
         <div className='iconDiv'>
-          <SiNextdotjs size={60} />
+          <SiNextdotjs size={isBreakPoint ? 30 : 60} />
           <p>NextJs</p>
         </div>
       </div>

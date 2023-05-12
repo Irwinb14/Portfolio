@@ -6,10 +6,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Contrail_One } from 'next/font/google';
 import { Fade } from 'react-awesome-reveal';
+import { useEffect, useState, useCallback } from 'react';
 
 const contrail = Contrail_One({ weight: '400', subsets: ['latin'] });
 
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, [width, updateTarget]);
+
+  return targetReached;
+};
+
 export default function Home() {
+  const isBreakPoint = useMediaQuery(600);
   return (
     <div className='homeContainer'>
       <div>
@@ -37,7 +65,7 @@ export default function Home() {
       <div className='projectsContainer'>
         <div className='projectCard'>
           <Link href='https://www.fitbotapp.com/' target='_blank'>
-            <Image width={600} src={fitbot} alt='FitBot' />
+            <Image width={isBreakPoint ? 300 : 600} src={fitbot} alt='FitBot' />
           </Link>
         </div>
         <div className='projectCard'>
@@ -45,7 +73,11 @@ export default function Home() {
             href='https://irwinb14.github.io/Covid-Choropleth/'
             target='_blank'
           >
-            <Image width={600} src={choropleth} alt='choropleth' />
+            <Image
+              width={isBreakPoint ? 300 : 600}
+              src={choropleth}
+              alt='choropleth'
+            />
           </Link>
         </div>
         <div className='projectCard'>
@@ -53,7 +85,11 @@ export default function Home() {
             href='https://github.com/postico-gracehopper/postico'
             target='_blank'
           >
-            <Image width={600} src={yardsale} alt='yardsale' />
+            <Image
+              width={isBreakPoint ? 300 : 600}
+              src={yardsale}
+              alt='yardsale'
+            />
           </Link>
         </div>
         <div className='atochaProjectCard'>
@@ -62,7 +98,7 @@ export default function Home() {
             target='_blank'
           >
             <Image
-              width={300}
+              width={isBreakPoint ? 200 : 300}
               src={atocha}
               alt='atocha'
               className='rounded-xl'

@@ -9,7 +9,6 @@
 } */
 
 
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -21,6 +20,8 @@ body {
 }
 
 /* Home */
+
+@media (min-width: 601px){
 .homeContainer {
   height: 100%;
   width: 100%;
@@ -64,7 +65,56 @@ body {
   color:#3790bd;
   font-size: 30px;
 }
+}
 
+@media (max-width: 600px) {
+  .homeContainer {
+      height: 100%;
+      width:fit-content;
+      display: flex;
+      flex-direction: column;
+      background-color: #ebebeb;
+    }
+  
+    .homeTitle {
+      text-align: center;
+      font-weight: bold;
+      font-size: 80px;
+      background-image: url('https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/search_result/public/media/images/Oceanwaves.gif?itok=FKjfzznN');
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  
+    .homeSubtitle {
+      text-align: center;
+      font-weight: bold;
+      font-size: 60px;
+      background-image: url('https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/search_result/public/media/images/Oceanwaves.gif?itok=FKjfzznN');
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  
+    .homeAboutContainer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+  
+    .homeAboutText {
+      width: 80%;
+      text-align: center;
+      color: #3790bd;
+      font-size: 25px;
+    }
+}
+
+/* NavBar */
+@media(min-width: 601px){
 nav{
   transition: .3s;
   background-color: rgba(255, 254, 254, 0.587);
@@ -146,7 +196,94 @@ nav.sticky {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+}
 
+@media(max-width: 600px){
+  nav {
+      transition: .3s;
+      background-color: rgba(255, 254, 254, 0.587);
+    }
+  
+    nav.sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(255, 254, 254, 0.587);
+    }
+  
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.587);
+      border-bottom: solid #6bb4d9aa;
+      border-bottom-width: 1px;
+      box-shadow: inset 0 -10px 10px -10px #2E8B57;
+    }
+  
+    .navItem {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 3rem;
+      display: inline-block;
+      position: relative;
+      color: #2E8B57;
+      font-weight: 400;
+      font-size: x-large;
+    }
+  
+    .navIconDiv {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      justify-content: space-between;
+      display: flex;
+      color: #2E8B57;
+    }
+  
+    .navIcon {
+      margin: 12px;
+    }
+  
+    .navIcon:hover {
+      animation: pulse 1s infinite;
+      animation-timing-function: linear;
+    }
+  
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+  
+      50% {
+        transform: scale(1.1);
+      }
+  
+      100% {
+        transform: scale(1);
+      }
+    }
+  
+  
+    .navItem::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #3790bd;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+  
+    .navItem:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+}
+
+/* Footer */
+@media (min-width: 601px){
 .footer{
   position: absolute;
   display:flex;
@@ -172,7 +309,42 @@ nav.sticky {
   color:#39b41ab5;
   font-weight: 300;
 }
+}
 
+@media (max-width: 600px){
+  .footer{
+  position: absolute;
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ebebeb;  
+}
+
+.footerContent{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.iconDiv {
+  margin: 20px;
+  text-align: center;
+  color: #39b41ab5;
+  font-weight: 300;
+  font-size: 15px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+}
+
+/* Projects - Home */
 .projectsContainer{
   margin-top: 20px;
     margin-bottom: 80px;
@@ -214,130 +386,294 @@ transform: scale(1.05);
 }
 
 /* About */
+@media (min-width: 601px){
+.aboutContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+  }
 
+  .aboutTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    background-image: url('https://t4.ftcdn.net/jpg/03/00/85/23/360_F_300852364_qSrtNxY6pokaVR7er7knpb8AyYJSxtUd.jpg');
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-.aboutContainer{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #ebebeb;
-}
+  .aboutCard {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+  }
 
-.aboutTitle{
-  text-align: center;
-  font-weight: bold;
-  font-size: 100px;
-  background-image: url('https://t4.ftcdn.net/jpg/03/00/85/23/360_F_300852364_qSrtNxY6pokaVR7er7knpb8AyYJSxtUd.jpg');
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
- 
-.aboutCard{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 36px;
-  margin-top: 50px;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 100px;
-}
+  .description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    color: #3790bd;
+  }
 
-.description{
-  display: flex;
- flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
-  color:#3790bd;
-}
-
-.descriptiionCard{
-  display: flex;
+  .descriptionCard {
+    display: flex;
     align-items: center;
     flex-direction: column;
+  }
+    .dividerAbout {
+      margin-top: 1rem;
+      width: 25%;
+      text-align: center;
+      border-color: #6bb4d9;
+      border-width: .5px;
+      box-shadow: 0px 0px 4px 1px #129b4d92;
+    }
+
+    .dividerAboutLong {
+      margin-top: 1rem;
+        width: 25%;
+        text-align: center;
+        border-color: #6bb4d9;
+        border-width: .5px;
+        box-shadow: 0px 0px 4px 1px #129b4d92;
+    }
 }
+@media (max-width: 600px){
+  .aboutContainer {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #ebebeb;
+    }
+  
+    .aboutTitle {
+      text-align: center;
+      font-weight: bold;
+      font-size: 80px;
+      background-image: url('https://t4.ftcdn.net/jpg/03/00/85/23/360_F_300852364_qSrtNxY6pokaVR7er7knpb8AyYJSxtUd.jpg');
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  
+    .aboutCard {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      margin-top: 50px;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+  
+    .description {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      color: #3790bd;
+    }
+  
+    .descriptionCard {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+ .dividerAbout {
+   margin-top: 1rem;
+   width: 25%;
+   text-align: center;
+   border-color: #6bb4d9;
+   border-width: .5px;
+   box-shadow: 0px 0px 4px 1px #129b4d92;
+ }
+
+  .dividerAboutLong {
+    margin-top: 1rem;
+    width: 15%;
+    text-align: center;
+    border-color: #6bb4d9;
+    border-width: .5px;
+    box-shadow: 0px 0px 4px 1px #129b4d92;
+  }
+}
+
 
 /* Projects */
+@media (min-width: 601px){
+  .projectsPageContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    align-items: center;
 
+  }
 
-.projectsPageContainer {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #ebebeb;
-  align-items: center;
-  
-}
+  .projectsPageTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    background-image: url('https://www.computerhope.com/jargon/p/program.png');
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+  }
 
-.projectsPageTitle {
-  text-align: center;
-  font-weight: bold;
-  font-size: 100px;
-  background-image: url('https://www.computerhope.com/jargon/p/program.png');
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 30px;
-}
-
-.projectsPageCard {
-  margin-top: 20px;
-  margin-bottom: 80px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color:rgba(250, 250, 250, 0.397);
-  width: 60%;
-  border-radius: 32px;
-  box-shadow: 12px 12px 13px #5e5e5e,
+  .projectsPageCard {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.397);
+    width: 60%;
+    border-radius: 32px;
+    box-shadow: 12px 12px 13px #5e5e5e,
       -12px -12px 13px #ffffff;
-}
+  }
 
-.projectTitle{
- font-size: 50px;
- font-weight: 500;
- color:#2E8B57
-}
+  .projectTitle {
+    font-size: 50px;
+    font-weight: 500;
+    color: #2E8B57
+  }
 
-.projectDescription{
-  width:80%;
-  text-align: center;
-  color: #3790bd;
-  font-size: large;
-}
+  .projectDescription {
+    width: 80%;
+    text-align: center;
+    color: #3790bd;
+    font-size: large;
+  }
 
-.projectLinksDiv{
-  width: 40%;
-  color:#2E8B57;
-  display: flex;
-  justify-content: space-evenly;
- margin-top: 30px;
-}
+  .projectLinksDiv {
+    width: 40%;
+    color: #2E8B57;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
 
-.stackContainer{
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
+  .stackContainer {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 
-.stackIcon{
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #39b41ab5;
-  font-weight: 300;
+  .stackIcon {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #39b41ab5;
+    font-weight: 300;
+  }}
+
+
+  @media (max-width: 601px){
+   .projectsPageContainer {
+     height: 100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     background-color: #ebebeb;
+     align-items: center;
+     
+   }
+   
+   .projectsPageTitle {
+     text-align: center;
+     font-weight: bold;
+     font-size: 80px;
+     background-image: url('https://www.computerhope.com/jargon/p/program.png');
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     margin-bottom: 30px;
+   }
+   
+   .projectsPageCard {
+     margin-top: 20px;
+     margin-bottom: 80px;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color:rgba(250, 250, 250, 0.397);
+     width: 90%;
+     border-radius: 32px;
+     box-shadow: 12px 12px 13px #5e5e5e,
+         -12px -12px 13px #ffffff;
+   }
+   
+   .projectTitle{
+    font-size: 50px;
+    font-weight: 500;
+    color:#2E8B57;
+    text-align: center;
+   }
+   
+   .projectDescription{
+     width:120%;
+     text-align: center;
+     color: #3790bd;
+     font-size: large;
+   }
+   
+   .projectLinksDiv{
+     width: 40%;
+     color:#2E8B57;
+     display: flex;
+     justify-content: space-evenly;
+    margin-top: 30px;
+   }
+   
+   .stackContainer{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 30px;
+     margin-top: 30px;
+   }
+   
+   .stackIcon{
+     display: flex;
+     flex-direction: column;
+     margin: 20px;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: #39b41ab5;
+     font-weight: 300;
+    font-size: medium;
+   }
 }

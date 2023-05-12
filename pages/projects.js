@@ -15,9 +15,38 @@ import {
   SiTailwindcss,
   SiSequelize,
 } from 'react-icons/si';
-import { DiJavascript, DiPostgresql } from 'react-icons/di';
+import { DiJavascript } from 'react-icons/di';
+import { useEffect, useState, useCallback } from 'react';
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, [width, updateTarget]);
+
+  return targetReached;
+};
 
 const Projects = () => {
+  const isBreakPoint = useMediaQuery(600);
+
   return (
     <div className='projectsPageContainer'>
       <h1 className='projectsPageTitle'>My Projects</h1>
@@ -35,35 +64,35 @@ const Projects = () => {
             </p>
             <div className='stackContainer'>
               <div className='stackIcon'>
-                <DiJavascript size={30} />
+                <DiJavascript size={isBreakPoint ? 25 : 30} />
                 <p>Javascript</p>
               </div>
               <div className='stackIcon'>
-                <FaHtml5 size={30} />
+                <FaHtml5 size={isBreakPoint ? 25 : 30} />
                 <p>HTML5</p>
               </div>
               <div className='stackIcon'>
-                <FaCss3 size={30} />
+                <FaCss3 size={isBreakPoint ? 25 : 30} />
                 <p>CSS</p>
               </div>
               <div className='stackIcon'>
-                <FaReact size={30} />
+                <FaReact size={isBreakPoint ? 25 : 30} />
                 <p>React</p>
               </div>
               <div className='stackIcon'>
-                <SiRedux size={30} />
+                <SiRedux size={isBreakPoint ? 25 : 30} />
                 <p>Redux</p>
               </div>
               <div className='stackIcon'>
-                <SiFirebase size={30} />
+                <SiFirebase size={isBreakPoint ? 25 : 30} />
                 <p>Firebase</p>
               </div>
               <div className='stackIcon'>
-                <SiOpenai size={30} />
+                <SiOpenai size={isBreakPoint ? 25 : 30} />
                 <p>OpenAI</p>
               </div>
               <div className='stackIcon'>
-                <SiTailwindcss size={30} />
+                <SiTailwindcss size={isBreakPoint ? 25 : 30} />
                 <p>TailwindCSS</p>
               </div>
             </div>
@@ -97,35 +126,35 @@ const Projects = () => {
             </p>
             <div className='stackContainer'>
               <div className='stackIcon'>
-                <DiJavascript size={30} />
+                <DiJavascript size={isBreakPoint ? 25 : 30} />
                 <p>Javascript</p>
               </div>
               <div className='stackIcon'>
-                <FaHtml5 size={30} />
+                <FaHtml5 size={isBreakPoint ? 25 : 30} />
                 <p>HTML5</p>
               </div>
               <div className='stackIcon'>
-                <FaCss3 size={30} />
+                <FaCss3 size={isBreakPoint ? 25 : 30} />
                 <p>CSS</p>
               </div>
               <div className='stackIcon'>
-                <FaReact size={30} />
+                <FaReact size={isBreakPoint ? 25 : 30} />
                 <p>React Native</p>
               </div>
               <div className='stackIcon'>
-                <SiRedux size={30} />
+                <SiRedux size={isBreakPoint ? 25 : 30} />
                 <p>Redux</p>
               </div>
               <div className='stackIcon'>
-                <SiFirebase size={30} />
+                <SiFirebase size={isBreakPoint ? 25 : 30} />
                 <p>Firebase</p>
               </div>
               <div className='stackIcon'>
-                <SiOpenai size={30} />
+                <SiOpenai size={isBreakPoint ? 25 : 30} />
                 <p>OpenAI</p>
               </div>
               <div className='stackIcon'>
-                <SiTailwindcss size={30} />
+                <SiTailwindcss size={isBreakPoint ? 25 : 30} />
                 <p>TailwindCSS</p>
               </div>
             </div>
@@ -159,22 +188,22 @@ const Projects = () => {
             </p>
             <div className='stackContainer'>
               <div className='stackIcon'>
-                <DiJavascript size={30} />
+                <DiJavascript size={isBreakPoint ? 25 : 30} />
                 <p>Javascript</p>
               </div>
               <div className='stackIcon'>
-                <FaHtml5 size={30} />
+                <FaHtml5 size={isBreakPoint ? 25 : 30} />
                 <p>HTML5</p>
               </div>
               <div className='stackIcon'>
-                <FaCss3 size={30} />
+                <FaCss3 size={isBreakPoint ? 25 : 30} />
                 <p>CSS</p>
               </div>
               <div className='stackIcon'>
                 <svg
-                  height='32'
+                  height={isBreakPoint ? '25' : '32'}
                   viewBox='0 0 32 32'
-                  width='32'
+                  width={isBreakPoint ? '25' : '32'}
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
@@ -215,35 +244,35 @@ const Projects = () => {
             </p>
             <div className='stackContainer'>
               <div className='stackIcon'>
-                <DiJavascript size={30} />
+                <DiJavascript size={isBreakPoint ? 25 : 30} />
                 <p>Javascript</p>
               </div>
               <div className='stackIcon'>
-                <FaHtml5 size={30} />
+                <FaHtml5 size={isBreakPoint ? 25 : 30} />
                 <p>HTML5</p>
               </div>
               <div className='stackIcon'>
-                <FaCss3 size={30} />
+                <FaCss3 size={isBreakPoint ? 25 : 30} />
                 <p>CSS</p>
               </div>
               <div className='stackIcon'>
-                <FaReact size={30} />
+                <FaReact size={isBreakPoint ? 25 : 30} />
                 <p>React Native</p>
               </div>
               <div className='stackIcon'>
-                <SiRedux size={30} />
+                <SiRedux size={isBreakPoint ? 25 : 30} />
                 <p>Redux</p>
               </div>
               <div className='stackIcon'>
-                <SiSequelize size={30} />
+                <SiSequelize size={isBreakPoint ? 25 : 30} />
                 <p>Sequelize</p>
               </div>
               <div className='stackIcon'>
-                <FaCcStripe size={30} />
+                <FaCcStripe size={isBreakPoint ? 25 : 30} />
                 <p>Stripe</p>
               </div>
               <div className='stackIcon'>
-                <SiTailwindcss size={30} />
+                <SiTailwindcss size={isBreakPoint ? 25 : 30} />
                 <p>TailwindCSS</p>
               </div>
             </div>

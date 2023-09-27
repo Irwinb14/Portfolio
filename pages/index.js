@@ -2,6 +2,7 @@ import fitbot from '../projects/FitBot.png';
 import choropleth from '../projects/choropleth.png';
 import atocha from '../projects/Atocha.png';
 import yardsale from '../projects/yardsale.png';
+import APOD from '../projects/APOD.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Contrail_One } from 'next/font/google';
@@ -66,6 +67,11 @@ export default function Home() {
         <div className='projectCard'>
           <Link href='https://www.fitbotapp.com/' target='_blank'>
             <Image width={isBreakPoint ? 300 : 600} src={fitbot} alt='FitBot' />
+          </Link>
+        </div>
+        <div className='projectCard'>
+          <Link href='https://nasa-api-irwinb14.vercel.app/' target='_blank'>
+            <Image width={isBreakPoint ? 300 : 600} src={APOD} alt='APOD' />
           </Link>
         </div>
         <div className='projectCard'>

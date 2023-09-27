@@ -2,6 +2,7 @@ import fitbot from '../projects/FitBot.png';
 import choropleth from '../projects/choropleth.png';
 import atocha from '../projects/Atocha.png';
 import yardsale from '../projects/yardsale.png';
+import APOD from '../projects/APOD.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiLink2 } from 'react-icons/fi';
@@ -14,8 +15,10 @@ import {
   SiFirebase,
   SiTailwindcss,
   SiSequelize,
+  SiNasa,
 } from 'react-icons/si';
 import { DiJavascript } from 'react-icons/di';
+import { TbBrandNextjs } from 'react-icons/tb';
 import { useEffect, useState, useCallback } from 'react';
 
 const useMediaQuery = (width) => {
@@ -170,6 +173,56 @@ const Projects = () => {
                 href='https://github.com/postico-gracehopper/atocha-client'
                 target='_blank'
               >
+                <BsGithub size={40} className='hover:scale-110' />
+              </Link>
+            </div>
+          </div>
+        </Fade>
+      </div>
+      <div className='projectsPageCard'>
+        <Fade duration='2000'>
+          <h1 className='projectTitle'>NASA APOD</h1>
+          <div className='projectCard'>
+            <p className='projectDescription'>
+              For this project, I used NASA's Astronomy Picture Of the Day API
+              to create a webpage that allows users to select a date and load
+              the picture of the day for the respective date selected.
+            </p>
+            <div className='stackContainer'>
+              <div className='stackIcon'>
+                <DiJavascript size={isBreakPoint ? 25 : 30} />
+                <p>Javascript</p>
+              </div>
+              <div className='stackIcon'>
+                <FaReact size={isBreakPoint ? 25 : 30} />
+                <p>React</p>
+              </div>
+              <div className='stackIcon'>
+                <FaCss3 size={isBreakPoint ? 25 : 30} />
+                <p>CSS</p>
+              </div>
+              <div className='stackIcon'>
+                <FaHtml5 size={isBreakPoint ? 25 : 30} />
+                <p>HTML5</p>
+              </div>
+              <div className='stackIcon'>
+                <SiNasa size={isBreakPoint ? 25 : 30} />
+                <p>NASA API</p>
+              </div>
+              <div className='stackIcon'>
+                <TbBrandNextjs size={isBreakPoint ? 25 : 30} />
+                <p>Next.js</p>
+              </div>
+            </div>
+            <Image width={500} src={APOD} alt='APOD' />
+            <div className='projectLinksDiv'>
+              <Link
+                href='https://nasa-api-irwinb14.vercel.app/'
+                target='_blank'
+              >
+                <FiLink2 size={40} className='hover:scale-110' />
+              </Link>
+              <Link href='https://github.com/Irwinb14/nasa-api' target='_blank'>
                 <BsGithub size={40} className='hover:scale-110' />
               </Link>
             </div>
